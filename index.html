@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CTD Solutions LLC - Software development, app creation, and digital innovation">
+    <title>CTD Solutions LLC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0052CC 0%, #3C3C3C 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            max-width: 60px;
+            background: white;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: opacity 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0052CC 0%, #3C3C3C 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #0052CC;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #333;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-logo {
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto 2rem;
+            display: block;
+        }
+
+        .expertise {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8e8e8 100%);
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .expertise-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .expertise-card h3 {
+            color: #0052CC;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .expertise-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .contact {
+            background: white;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .contact-info p {
+            margin: 1rem 0;
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #0052CC;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: #0052CC;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #003d99;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">
+                <span class="logo-text">CTD Solutions LLC</span>
+            </a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#expertise">What We Do</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>CTD Solutions LLC</h1>
+        <p>Innovative software development & digital solutions for the modern world</p>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="logo.png" alt="CTD Solutions LLC Logo" class="about-logo">
+                <p>CTD Solutions LLC was founded in 2016 with a mission to create innovative software solutions and digital experiences. We specialize in custom application development, web design, and emerging technologies.</p>
+                <p>Our team is passionate about building elegant, functional solutions that solve real problems. From mobile apps to web platforms, we bring ideas to life through clean code and thoughtful design.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise" id="expertise">
+        <div class="container">
+            <h2>What We Do</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h3>📱 App Development</h3>
+                    <p>Custom mobile and web applications built with modern technologies and best practices for performance and scalability.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>🌐 Web Design</h3>
+                    <p>Beautiful, responsive websites that engage users and drive results. From design to deployment, we handle it all.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>🤖 AI & LLM Integration</h3>
+                    <p>Exploring the cutting edge of artificial intelligence and large language models to create intelligent solutions.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>💡 Digital Innovation</h3>
+                    <p>We stay ahead of the curve, leveraging emerging technologies to solve problems and create opportunities.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>📚 Content & Technical Writing</h3>
+                    <p>Educational content about software development, technology trends, and digital innovation for online platforms.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>⚙️ Custom Solutions</h3>
+                    <p>Tailored software solutions designed specifically for your unique business needs and challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <p>Interested in working together? We'd love to hear about your project or opportunity.</p>
+                <div class="contact-info">
+                    <p>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:admin@ctdsolutionllc.com">admin@ctdsolutionllc.com</a>
+                    </p>
+                    <p>
+                        <strong>Business:</strong><br>
+                        CTD Solutions LLC<br>
+                        Mississippi, USA
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024-2026 CTD Solutions LLC. All rights reserved.</p>
+        <p>Building innovative software solutions | Est. 2016</p>
+    </footer>
+</body>
+</html>
